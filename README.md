@@ -15,6 +15,7 @@ aws ec2 describe-regions --output table
 
 # CREATION ET CONFIGURATION SECURITY GROUP
 aws ec2 create-security-group --group-name devenv-sg --description "security group for development environment in EC2"
+
 aws ec2 authorize-security-group-ingress --group-name devenv-sg --protocol tcp --port 22 --cidr 0.0.0.0/0
 
 # CREATION DE LA CLE SSH
